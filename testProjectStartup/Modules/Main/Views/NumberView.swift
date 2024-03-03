@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct NumberView: View {
-    @State private var scale: CGFloat = 1.0
     ///Flag indicating whether a number was pressed
     @State private var isPressed = false
+    @State private var scale: CGFloat = Constants.scaleDefaults
     @Binding var number: Int
     var updateRandomNumber: () -> Void
     
@@ -66,5 +66,6 @@ fileprivate extension NumberView {
 	   static let scaleOnPress: CGFloat = 0.8
 	   static let padding: CGFloat = 5
 	   static let scaleOffPress: CGFloat = 1.0
+	   static let scaleDefaults: CGFloat = 1.0
     }
 }
